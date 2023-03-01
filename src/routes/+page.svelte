@@ -17,6 +17,10 @@
             };
         });
     });
+
+    $: if (selected.length > 0) {
+        console.log("Changed selected");
+    }
 </script>
 
 <Header />
@@ -26,9 +30,11 @@
         Select a fish to know more about
         <Select class="mt-2" bind:items={fishes} bind:value={selected} />
     </Label>
-    <p>
-        Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-    </p>
+    {#if selected}
+        <div>
+            <h1>You selected {selected}</h1>
+        </div>
+    {/if}
     <Alert>
         <span class="font-medium">Info alert!</span> Change a few things up and try
         submitting again.
