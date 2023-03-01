@@ -3,7 +3,7 @@
     import Footer from "../../lib/Footer.svelte";
 </script>
 
-<div style="p8">
+<div>
     <Header />
     <h1>Hello</h1>
     <Footer />
