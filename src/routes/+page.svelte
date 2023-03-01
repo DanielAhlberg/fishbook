@@ -7,16 +7,20 @@
     let hCard = false;
     let selected = "";
     let fishes = [{}];
-    let fishesNames = [{}];
+    let fishNames = [{}];
+    let fishImages = [{}]
     let endpoint = "https://www.fishwatch.gov/api/species";
-    let fishOfTheDay = {}
-    let nameOfTheDay = ""
-    let fishOfTheDayName = ""
+    let fishOfTheDay = {};
+    let imgSrc = undefined;
 
     async function randomizeFish() {
-        fishOfTheDay = fishesNames[Math.floor(Math.random()*fishes.length)];
-        //nameOfTheDay = fishOfTheDay["Species Name"] || "not present today :(";
-
+        fishOfTheDay = fishes[Math.floor(Math.random()*fishes.length)];
+        retrieveImage();
+        //let images = fishImages.filter((x) => x.name === fishOfTheDay.name);
+    }
+    async function retrieveImage() {
+        imgSrc = fishOfTheDay["Image Gallery"] ? fishOfTheDay["Image Gallery"][0].src : undefined;
+        return imgSrc;
     }
 
 
@@ -26,18 +30,24 @@
         fishes = Object.keys(data).map((x) => {
             return {
                 value: data[x],
-                name: data[x],
+                name: data[x]["Species Name"],
             };
         });
-        fishesNames = Object.keys(data).map((x) => {
+        fishNames = Object.keys(data).map((x) => {
             return {
                 value: data[x]["Species Name"],
                 name: data[x]["Species Name"],
             };
         });
         randomizeFish();
-        //console.log(fishesNames);
-        console.log(fishOfTheDay.name);
+        //console.log(fishes);
+        //fishOfTheDay = fishes[Math.floor(Math.random()*fishes.length)];
+        //imgSrc = fishOfTheDay["Image Gallery"] ? fishOfTheDay["Image Gallery"][0]["src"] : undefined;
+        //console.log(imgSrc);
+        //console.log(fishOfTheDay["Image Gallery"])
+
+
+        //console.log(fishOfTheDay.name);
     });
 
     $: if (selected.length > 0) {
@@ -49,7 +59,7 @@
 <div class="px-20 py-8">
     <h1>Welcome to Fishbook</h1>
     <div>
-        <Card img="/images/image-1.webp" href="/" horizontal reverse={hCard}>
+        <Card img={retrieveImage()} href="/" horizontal reverse={hCard}>
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fish of the day!</h5>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
             This is the fish of the day {fishOfTheDay.name}.
@@ -59,7 +69,7 @@
       </div>
     <Label>
         Select a fish to know more about
-        <Select class="mt-2" bind:items={fishesNames} bind:value={selected} />
+        <Select class="mt-2" bind:items={fishNames} bind:value={selected} />
     </Label>
     {#if selected}
         <div>
