@@ -21,6 +21,102 @@
         {
             name: "Nemo",
             imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
+            attribution: "Borttappad, hittelön utlovas",
+            descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
+        },
+        {
+            name: "Nemoooooooooooooooooooooooooooooooooooooooooooooooooooooooooo",
+            imgurl: "https://m.media-amazon.com/images/I/71E7e0RRujL._AC_UF1000,1000_QL80_.jpg",
             attribution: "Borttappad, hittelön utlovas XXXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             descripton: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home."
         }
@@ -59,9 +155,9 @@
                             </p>
                         </div>
                         <div
-                            class="inline-flex justify-self-end font-semibold text-gray-900 dark:text-white"
+                            class="inline-flex justify-self-end font-semibold text-blue-700 dark:text-white"
                         >
-                            <Button on:click={() => (modals[i] = true)}
+                            <Button class="bg-transparent hover:bg-blue-500 text-black font-semibold hover:text-white py-2 px-4 border border-grey hover:border-transparent rounded" on:click={() => (modals[i] = true)}
                                 >Visa mer</Button
                             >
                             <Modal
@@ -69,6 +165,9 @@
                                 bind:open={modals[i]}
                                 autoclose
                             >
+                                <img src={image.imgurl}/>
+
+                                <h1 class="text-xl">Om fisken</h1>
                                 <p
                                     class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
                                 >
