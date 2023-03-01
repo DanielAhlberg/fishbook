@@ -107,18 +107,22 @@
                     >
                         {fish["Species Name"]}
                     </h5>
-                    <h4>Biology</h4>
-                    <p
-                        class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight"
-                    >
-                        {@html fish["Biology"]}
-                    </p>
-                    <h4>Habitat</h4>
-                    <p
-                        class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight"
-                    >
-                        {@html fish["Habitat"]}
-                    </p>
+                    {#if fish["Biology"]}
+                        <Heading tag="h5">Biology</Heading>
+                        <p
+                            class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight"
+                        >
+                            {@html fish["Biology"]}
+                        </p>
+                    {/if}
+                    {#if fish["Habitat"]}
+                        <Heading tag="h5">Habitat</Heading>
+                        <p
+                            class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight"
+                        >
+                            {@html fish["Habitat"]}
+                        </p>
+                    {/if}
                 </Card>
             {/await}
         {/if}
