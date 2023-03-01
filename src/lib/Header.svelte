@@ -11,7 +11,7 @@
 <Navbar let:hidden let:toggle>
     <NavBrand href="/">
         <img
-            src="https://flowbite.com/docs/images/logo.svg"
+            src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/13187/31213/fish__74861.1558039324.png?c=2"
             class="mr-3 h-6 sm:h-9"
             alt="Flowbite Logo"
         />
