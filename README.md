@@ -7,22 +7,22 @@ Paket vi kommer använda: Flowbite-Svelte
 
 
 De sidor vi kommer ha för att strukturera upp applikationen är följande [WIP]:
-Välkommen / Hemsida
-Dagens fisk - med kuriosa
-Lägg in din senaste fångst
-Formulär
-Sök efter fiskar 
-Se din fångsthistorik - endast localstorage
-Galleri med bilder av dom du har fångat
-Med statistik på antal fångster
-Få information om fisken du har fångat under dina fisketurer
-Namn
-Vikt
-Antal
-Datum fångat
-Storlek
-Allmän information - api -
-Om oss - FISHBOOK
+*Välkommen / Hemsida
+*Dagens fisk - med kuriosa
+*Lägg in din senaste fångst
+*Formulär
+*Sök efter fiskar 
+*Se din fångsthistorik - endast localstorage
+**Galleri med bilder av dom du har fångat
+**Med statistik på antal fångster
+**Få information om fisken du har fångat under dina fisketurer
+**Namn
+**Vikt
+**Antal
+**Datum fångat
+**Storlek
+**Allmän information - api -
+**Om oss - FISHBOOK
 
 
 # create-svelte
