@@ -5,15 +5,11 @@
         NavLi,
         NavUl,
         NavHamburger,
-        DarkMode
+        DarkMode,
     } from "flowbite-svelte";
 </script>
 
-<Navbar
-    navClass="px-2 sm:px-4 py-2.5 absolute w-full z-20 top-0 left-0 border-b"
-    let:hidden
-    let:toggle
->
+<Navbar navClass="mb-8" let:hidden let:toggle>
     <NavBrand href="/">
         <img
             src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/13187/31213/fish__74861.1558039324.png?c=2"
@@ -33,7 +29,6 @@
         <NavLi href="/catalogue">Fish catalogue</NavLi>
         <NavLi href="/search">Fish search</NavLi>
         <NavLi href="/about">Om oss</NavLi>
-        <DarkMode/>
+        <DarkMode />
     </NavUl>
 </Navbar>
-
