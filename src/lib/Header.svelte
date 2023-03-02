@@ -9,7 +9,7 @@
     } from "flowbite-svelte";
 </script>
 
-<Navbar navClass="mb-8" let:hidden let:toggle>
+<Navbar navClass="mb-4 py-2 fixed w-full" let:hidden let:toggle>
     <NavBrand href="/">
         <img
             src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/13187/31213/fish__74861.1558039324.png?c=2"
@@ -22,13 +22,18 @@
             Fishbook
         </span>
     </NavBrand>
-    <NavHamburger on:click={toggle} />
+    <div class="flex items-center md:order-2">
+        <NavHamburger
+            on:click={toggle}
+            class1="w-full md:flex md:w-auto md:order-1"
+        />
+        <DarkMode />
+    </div>
     <NavUl {hidden}>
-        <NavLi href="/" active={true}>Home</NavLi>
+        <NavLi href="/">Home</NavLi>
         <NavLi href="/addcatch">Add catch</NavLi>
         <NavLi href="/catalogue">Fish catalogue</NavLi>
         <NavLi href="/search">Fish search</NavLi>
         <NavLi href="/about">Om oss</NavLi>
-        <DarkMode />
     </NavUl>
 </Navbar>

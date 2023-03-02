@@ -72,7 +72,7 @@
 </script>
 
 <Header />
-<div class="px-20 py-8">
+<div class="px-20">
     <p
         class="text-4xl py-8 font-bold text-center text-gray-900 dark:text-white"
     >

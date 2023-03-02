@@ -73,12 +73,13 @@
     }
 
     $: search, filterFishes();
+    $: selected, handleSearch();
 </script>
 
 <Header />
-<div class="px-20 py-8">
+<div class="px-20 pb-8 pt-24 overflow-scroll">
     <div class="pb-4">
-        <Heading tag="h2" class=" flex justify-center pb-2"
+        <Heading tag="h2" class=" flex justify-center mb-8"
             >Search for a fish</Heading
         >
         <div class="flex justify-center">
