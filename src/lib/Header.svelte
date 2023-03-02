@@ -7,6 +7,12 @@
         NavHamburger,
         DarkMode,
     } from "flowbite-svelte";
+    import { page } from "$app/stores";
+    let path = $page.url.pathname;
+    function getPath(currentPath) {
+        path = currentPath;
+    }
+    $: getPath($page.url.pathname);
 </script>
 
 <Navbar navClass="mb-4 py-2 fixed w-full" let:hidden let:toggle>
@@ -30,10 +36,12 @@
         <DarkMode />
     </div>
     <NavUl {hidden}>
-        <NavLi active={true} href="/">Home</NavLi>
-        <NavLi href="/addcatch">Add catch</NavLi>
-        <NavLi href="/catalogue">Fish catalogue</NavLi>
-        <NavLi href="/search">Fish search</NavLi>
-        <NavLi href="/about">Om oss</NavLi>
+        <NavLi active={path == "/"} href="/">Home</NavLi>
+        <NavLi active={path == "/addcatch"} href="/addcatch">Add catch</NavLi>
+        <NavLi active={path == "/catalogue"} href="/catalogue"
+            >Fish catalogue</NavLi
+        >
+        <NavLi active={path == "/search"} href="/search">Fish search</NavLi>
+        <NavLi active={path == "/about"} href="/about">Om oss</NavLi>
     </NavUl>
 </Navbar>
