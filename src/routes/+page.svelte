@@ -4,6 +4,7 @@
     import { onMount } from "svelte";
     import { Alert, Label, Select } from "flowbite-svelte";
     import { Card, Button, Toggle } from "flowbite-svelte";
+    import Wrapper from "$lib/Wrapper.svelte";
     let hCard = false;
     let selected = "";
     let fishes = [{ value: "", name: "" }];
@@ -71,8 +72,7 @@
     }
 </script>
 
-<Header />
-<div class="px-20">
+<Wrapper>
     <p
         class="text-4xl py-8 font-bold text-center text-gray-900 dark:text-white"
     >
@@ -99,5 +99,4 @@
             {/if}
         </div>
     </div>
-</div>
-<Footer />
+</Wrapper>

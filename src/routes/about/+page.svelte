@@ -1,4 +1,6 @@
 <script>
+    import Wrapper from "../../lib/Wrapper.svelte";
+    import { Button, Modal } from "flowbite-svelte";
     const images = [
         {
             name: "Lisa Bybro",
@@ -30,14 +32,10 @@
         },
     ];
 
-    import Header from "../../lib/Header.svelte";
-    import Footer from "../../lib/Footer.svelte";
-    import { Button, Modal } from "flowbite-svelte";
     var modals = new Array(images.length).fill(false);
 </script>
 
-<Header />
-<div class="py-24">
+<Wrapper>
     <p class="text-4xl font-bold text-center text-gray-900 dark:text-white">
         Om företaget
     </p>
@@ -92,5 +90,4 @@
             </div>
         {/each}
     </div>
-    <Footer />
-</div>
+</Wrapper>

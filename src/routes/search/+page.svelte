@@ -12,6 +12,7 @@
         Spinner,
     } from "flowbite-svelte";
     import { onMount } from "svelte";
+    import Wrapper from "$lib/Wrapper.svelte";
 
     let selected = "";
     let search = "";
@@ -76,8 +77,7 @@
     $: selected, handleSearch();
 </script>
 
-<Header />
-<div class="px-20 pb-8 pt-24 overflow-scroll">
+<Wrapper>
     <div class="pb-4">
         <Heading tag="h2" class=" flex justify-center mb-8"
             >Search for a fish</Heading
@@ -141,5 +141,4 @@
             {/await}
         {/if}
     </div>
-</div>
-<Footer />
+</Wrapper>

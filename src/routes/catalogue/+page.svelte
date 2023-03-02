@@ -146,11 +146,11 @@
     import Header from "../../lib/Header.svelte";
     import Footer from "../../lib/Footer.svelte";
     import { Button, Modal, List, Li } from "flowbite-svelte";
+    import Wrapper from "$lib/Wrapper.svelte";
     var modals = new Array(images.length).fill(false);
 </script>
 
-<Header />
-<div class="pt-24">
+<Wrapper>
     <div class="grid grid-cols-3 gap-8 m-16">
         {#each images as image, i}
             <div
@@ -194,5 +194,4 @@
             </div>
         {/each}
     </div>
-    <Footer />
-</div>
+</Wrapper>

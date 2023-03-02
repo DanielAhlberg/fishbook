@@ -3,6 +3,7 @@
     import Footer from "../../lib/Footer.svelte";
     import { onMount } from "svelte";
     import { Label, Select, Input, Button, Datepicker } from "flowbite-svelte";
+    import Wrapper from "$lib/Wrapper.svelte";
 
     let selected = "";
     let fishes = [{}];
@@ -25,8 +26,7 @@
     }
 </script>
 
-<Header />
-<div class="px-20 py-24">
+<Wrapper>
     <h1
         class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
     >
@@ -60,5 +60,4 @@
         </div>
         <Button type="submit">Submit</Button>
     </form>
-</div>
-<Footer />
+</Wrapper>
