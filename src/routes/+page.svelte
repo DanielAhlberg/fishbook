@@ -37,12 +37,11 @@
     }
 
     function formatInfo() {
-        let name = fishOfTheDay.name;
-        let scientificName =    fishInfo["Scientific Name"] || "";
-        let location =          fishInfo["Location"] || "";
+        let scientificName =        fishInfo["Scientific Name"] || "";
+        let location =              fishInfo["Location"] || "";
         let physicalDescription =   fishInfo["Physical Description"] || "";
 
-        let infoString = scientificName + location + physicalDescription + ".";
+        let infoString = (scientificName + '\n' + location + '\n' + physicalDescription).replace(/<\/?[^>]+(>|$)/g, "").replace(/\&nbsp;/g, '');
         return infoString;
 
 
