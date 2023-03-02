@@ -19,9 +19,9 @@
             const response = await fetch(uri);
             const data = await response.json();
             fishInfo = data[0];
-            imgSrc = fishInfo["Image Gallery"]
-                ? fishInfo["Image Gallery"][0]["src"]
-                : "";
+            imgSrc =    fishInfo["Image Gallery"]
+                        ? fishInfo["Image Gallery"][1]["src"]
+                        : "";
         }
     }
 
@@ -34,6 +34,17 @@
                 img.src = imgSrc;
             });
         }
+    }
+
+    function formatInfo() {
+        let scientificName =        fishInfo["Scientific Name"] || "";
+        let location =              fishInfo["Location"] || "";
+        let physicalDescription =   fishInfo["Physical Description"] || "";
+
+        let infoString = (scientificName + '\n' + location + '\n' + physicalDescription).replace(/<\/?[^>]+(>|$)/g, "").replace(/\&nbsp;/g, '');
+        return infoString;
+
+
     }
 
     onMount(async function () {
@@ -62,7 +73,7 @@
                 <Card img={imgSrc} href="/" horizontal reverse={hCard}>
                   <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fish of the day!</h5>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">
-                    This is the fish of the day {fishOfTheDay.name}.
+                    The fish of the day {fishOfTheDay.name}. {formatInfo()}
                   </p>
                 </Card>
             {/await}
