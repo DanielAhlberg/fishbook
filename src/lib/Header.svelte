@@ -27,5 +27,6 @@
         <NavLi href="/addcatch">Add catch</NavLi>
         <NavLi href="/catalogue">Fish catalogue</NavLi>
         <NavLi href="/search">Fish search</NavLi>
+        <NavLi href="/about">Om oss</NavLi>
     </NavUl>
 </Navbar>
