@@ -8,6 +8,7 @@
         Select,
         ButtonGroup,
         Input,
+        Heading,
     } from "flowbite-svelte";
     import { onMount } from "svelte";
 
@@ -16,7 +17,7 @@
     let fishes = [{ value: "", name: "" }];
     let filteredFishes = [{ value: "", name: "" }];
     let fish = {};
-    let fishSrc = undefined;
+    let fishSrc = "";
     let endpoint = "https://www.fishwatch.gov/api/species";
 
     onMount(async function () {
@@ -34,21 +35,35 @@
     });
 
     function filterFishes() {
-        console.log("Running filter fishes");
         filteredFishes = fishes.filter((x) => {
             return x.value.toLowerCase().includes(search.toLowerCase());
         });
-        selected = filteredFishes[0].value;
+        if (filteredFishes.length > 0) {
+            selected = filteredFishes[0].value;
+        } else {
+            selected = "";
+        }
     }
 
     async function handleSearch() {
-        if (selected.length > 0) {
-            const response = await fetch(endpoint + "/" + selected);
+        if (selected) {
+            const uri = encodeURI(endpoint + "/" + selected);
+            const response = await fetch(uri);
             const data = await response.json();
             fish = data[0];
             fishSrc = fish["Image Gallery"]
                 ? fish["Image Gallery"][0]["src"]
-                : undefined;
+                : "";
+        }
+    }
+
+    function preload(fishSrc) {
+        if (fishSrc.length > 0) {
+            return new Promise(function (resolve) {
+                let img = new Image();
+                img.onload = resolve;
+                img.src = fishSrc;
+            });
         }
     }
 
@@ -57,20 +72,14 @@
 
 <Header />
 <div class="px-20 py-8">
-    <div class="pb-4 justify-center">
-        <h1 class="flex justify-center pb-2">Search for a fish</h1>
+    <div class="pb-4">
+        <Heading tag="h2" class=" flex justify-center pb-2"
+            >Search for a fish</Heading
+        >
         <div class="flex justify-center">
-            <ButtonGroup class="flex justify-center">
-                <Select
-                    class="max-w-lg"
-                    bind:items={filteredFishes}
-                    bind:value={selected}
-                />
-                <Input
-                    class="max-w-lg"
-                    placeholder="Search"
-                    bind:value={search}
-                />
+            <ButtonGroup class="">
+                <Select bind:items={filteredFishes} bind:value={selected} />
+                <Input placeholder="Search" bind:value={search} />
                 <Button on:click={handleSearch} class="!p-2.5">
                     <svg
                         class="w-5 h-5"
@@ -91,25 +100,27 @@
     </div>
     <div class="flex v-screen">
         {#if Object.keys(fish).length > 0}
-            <Card class="m-auto" img={fishSrc} size="lg" padding="xl">
-                <h5
-                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-                >
-                    {fish["Species Name"]}
-                </h5>
-                <h4>Biology</h4>
-                <p
-                    class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight"
-                >
-                    {@html fish["Biology"]}
-                </p>
-                <h4>Habitat</h4>
-                <p
-                    class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight"
-                >
-                    {@html fish["Habitat"]}
-                </p>
-            </Card>
+            {#await preload(fishSrc) then _}
+                <Card class="m-auto" img={fishSrc} size="lg" padding="xl">
+                    <h5
+                        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                    >
+                        {fish["Species Name"]}
+                    </h5>
+                    <h4>Biology</h4>
+                    <p
+                        class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight"
+                    >
+                        {@html fish["Biology"]}
+                    </p>
+                    <h4>Habitat</h4>
+                    <p
+                        class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight"
+                    >
+                        {@html fish["Habitat"]}
+                    </p>
+                </Card>
+            {/await}
         {/if}
     </div>
 </div>
