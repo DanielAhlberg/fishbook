@@ -130,34 +130,27 @@
 
 <div style="p8">
     <Header />
-    <div class="flex justify-evenly">
-        <List tag="ul" class="w-screen divide-y divide-gray-200 dark:divide-gray-700">
+    <div class="grid grid-cols-3 gap-8 m-16">
             {#each images as image, i}
-                <Li class="py-2" icon>
-                    <div class="flex items-center justify-self-center space-x-2 h-16 w-full">
-                        <div class="flex-shrink-0">
+                    <div class="justify-evenly bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <img
-                                class="w-20 h-16 rounded-md object-cover hover:object-scale-down"
+                                class="rounded-t-lg hover:object-scale-down"
                                 src={image.imgurl}
                                 alt={image.name}
                             />
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <p
-                                class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                        <div class="p-5">
+                            <h5
+                                class="mb-2 text-2xl font-bold truncate tracking-tight text-gray-900 dark:text-white"
                             >
                                 {image.name}
-                            </p>
+                        </h5>
                             <p
-                                class="text-sm text-gray-500 truncate dark:text-gray-400"
+                                class="mb-3 font-normal truncate text-gray-700 dark:text-gray-400"
                             >
                                 {image.attribution}
                             </p>
-                        </div>
-                        <div
-                            class="inline-flex justify-self-end font-semibold text-blue-700 dark:text-white"
-                        >
-                            <Button class="bg-transparent hover:bg-blue-500 text-black font-semibold hover:text-white py-2 px-4 border border-grey hover:border-transparent rounded" on:click={() => (modals[i] = true)}
+                       
+                            <Button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" on:click={() => (modals[i] = true)}
                                 >Visa mer</Button
                             >
                             <Modal
@@ -179,10 +172,8 @@
                                 </svelte:fragment>
                             </Modal>
                         </div>
-                    </div>
-                </Li>
+                        </div>
             {/each}
-        </List>
     </div>
     <Footer />
 </div>
