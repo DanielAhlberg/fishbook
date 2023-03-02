@@ -158,7 +158,7 @@
                                 bind:open={modals[i]}
                                 autoclose
                             >
-                                <img src={image.imgurl}/>
+                                <img src={image.imgurl} alt={image.name}/>
 
                                 <h1 class="text-xl">Om fisken</h1>
                                 <p
