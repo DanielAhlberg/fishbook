@@ -24,7 +24,7 @@
     <NavHamburger on:click={toggle} />
     <NavUl {hidden}>
         <NavLi href="/" active={true}>Home</NavLi>
-        <NavLi href="/add-catch">Add catch</NavLi>
+        <NavLi href="/addcatch">Add catch</NavLi>
         <NavLi href="/catalogue">Fish catalogue</NavLi>
         <NavLi href="/search">Fish search</NavLi>
     </NavUl>
