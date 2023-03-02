@@ -30,7 +30,7 @@
         <DarkMode />
     </div>
     <NavUl {hidden}>
-        <NavLi href="/">Home</NavLi>
+        <NavLi active={true} href="/">Home</NavLi>
         <NavLi href="/addcatch">Add catch</NavLi>
         <NavLi href="/catalogue">Fish catalogue</NavLi>
         <NavLi href="/search">Fish search</NavLi>

@@ -4,7 +4,7 @@
 </script>
 
 <Header />
-<div class="py-24 px-12 overflow-scroll">
+<div class="py-24 px-12">
     <slot />
 </div>
 <Footer />
