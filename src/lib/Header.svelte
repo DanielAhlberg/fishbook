@@ -5,6 +5,7 @@
         NavLi,
         NavUl,
         NavHamburger,
+        DarkMode
     } from "flowbite-svelte";
 </script>
 
@@ -28,5 +29,7 @@
         <NavLi href="/catalogue">Fish catalogue</NavLi>
         <NavLi href="/search">Fish search</NavLi>
         <NavLi href="/about">Om oss</NavLi>
+        <DarkMode/>
     </NavUl>
 </Navbar>
+
