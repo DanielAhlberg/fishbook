@@ -6,8 +6,7 @@
             name: "Lisa Bybro",
             imgurl: "https://scontent-arn2-2.xx.fbcdn.net/v/t1.15752-9/332360587_529040725795683_6008864962436741800_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=sP5XQxQatyUAX_OiuhG&_nc_ht=scontent-arn2-2.xx&oh=03_AdR3ZOH1cruS4zxyhq5Q0MLopre47wThUpuiyN5aQspJvg&oe=6427D13C",
             attribution: "En rikigt fångst",
-            descripton:
-                "Peppad som få är Lisa Bybro den första du vill ringa när livet är glassigt. Med en talang för matlagning, bättre än många enligt henne, vill du verkligen hem och smaka hennes fiskpinnar",
+            descripton:"Peppad som få är Lisa Bybro den första du vill ringa när livet är glassigt. Hon har en talang för matlagning, bättre än många enligt henne, du verkligen hem och smaka hennes fiskpinnar",
         },
         {
             name: "Joel Bergstrand",
