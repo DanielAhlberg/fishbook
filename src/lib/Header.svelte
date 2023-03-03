@@ -5,10 +5,17 @@
         NavLi,
         NavUl,
         NavHamburger,
+        DarkMode,
     } from "flowbite-svelte";
+    import { page } from "$app/stores";
+    let path = $page.url.pathname;
+    function getPath(currentPath) {
+        path = currentPath;
+    }
+    $: getPath($page.url.pathname);
 </script>
 
-<Navbar let:hidden let:toggle>
+<Navbar navClass="mb-4 py-2 fixed w-full" let:hidden let:toggle>
     <NavBrand href="/">
         <img
             src="https://cdn11.bigcommerce.com/s-hii7479o/images/stencil/original/products/13187/31213/fish__74861.1558039324.png?c=2"
@@ -21,12 +28,20 @@
             Fishbook
         </span>
     </NavBrand>
-    <NavHamburger on:click={toggle} />
+    <div class="flex items-center md:order-2">
+        <NavHamburger
+            on:click={toggle}
+            class1="w-full md:flex md:w-auto md:order-1"
+        />
+        <DarkMode />
+    </div>
     <NavUl {hidden}>
-        <NavLi href="/" active={true}>Home</NavLi>
-        <NavLi href="/addcatch">Add catch</NavLi>
-        <NavLi href="/catalogue">Fish catalogue</NavLi>
-        <NavLi href="/search">Fish search</NavLi>
-        <NavLi href="/about">Om oss</NavLi>
+        <NavLi active={path == "/"} href="/">Home</NavLi>
+        <NavLi active={path == "/addcatch"} href="/addcatch">Add catch</NavLi>
+        <NavLi active={path == "/catalogue"} href="/catalogue"
+            >Fish catalogue</NavLi
+        >
+        <NavLi active={path == "/search"} href="/search">Fish search</NavLi>
+        <NavLi active={path == "/about"} href="/about">Om oss</NavLi>
     </NavUl>
 </Navbar>

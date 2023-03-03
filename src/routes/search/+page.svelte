@@ -9,11 +9,14 @@
         ButtonGroup,
         Input,
         Heading,
+        Spinner,
     } from "flowbite-svelte";
     import { onMount } from "svelte";
+    import Wrapper from "$lib/Wrapper.svelte";
 
     let selected = "";
     let search = "";
+    let loading = false;
     let fishes = [{ value: "", name: "" }];
     let filteredFishes = [{ value: "", name: "" }];
     let fish = {};
@@ -47,6 +50,7 @@
 
     async function handleSearch() {
         if (selected) {
+            loading = true;
             const uri = encodeURI(endpoint + "/" + selected);
             const response = await fetch(uri);
             const data = await response.json();
@@ -54,6 +58,7 @@
             fishSrc = fish["Image Gallery"]
                 ? fish["Image Gallery"][0]["src"]
                 : "";
+            loading = false;
         }
     }
 
@@ -65,35 +70,44 @@
                 img.src = fishSrc;
             });
         }
+        console.log("Loading", loading);
     }
 
     $: search, filterFishes();
+    $: selected, handleSearch();
 </script>
 
-<Header />
-<div class="px-20 py-8">
+<Wrapper>
     <div class="pb-4">
-        <Heading tag="h2" class=" flex justify-center pb-2"
+        <Heading tag="h2" class=" flex justify-center mb-8"
             >Search for a fish</Heading
         >
         <div class="flex justify-center">
             <ButtonGroup class="">
                 <Select bind:items={filteredFishes} bind:value={selected} />
                 <Input placeholder="Search" bind:value={search} />
-                <Button on:click={handleSearch} class="!p-2.5">
-                    <svg
-                        class="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        ><path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                        /></svg
-                    >
+                <Button
+                    on:click={handleSearch}
+                    disabled={loading}
+                    class="!p-2.5"
+                >
+                    {#if loading}
+                        <Spinner class="mr-3" size="4" color="white" />
+                    {:else}
+                        <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            ><path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                            /></svg
+                        >
+                    {/if}
                 </Button>
             </ButtonGroup>
         </div>
@@ -127,5 +141,4 @@
             {/await}
         {/if}
     </div>
-</div>
-<Footer />
+</Wrapper>

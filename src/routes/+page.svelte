@@ -50,11 +50,7 @@
         return ((infoString.length > 4) ? infoString : "There are no fun facts about this fish :(");
     }
 
-    function setText() {
-        let infoString = formatInfo();
-        (infoString.length < 1) ? infoString = "There is no fun fact about this fish" : "";
-        return infoString;
-    }
+
 
     onMount(async function () {
         const response = await fetch(endpoint);
