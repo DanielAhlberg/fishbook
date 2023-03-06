@@ -70,6 +70,8 @@
 </script>
 
 <Header />
+<br>
+<br>
 <div class="px-20 py-8">
     <div class=" flex justify-center pb-2">
         <Card href="/addcatch">
